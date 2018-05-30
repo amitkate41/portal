@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.capita</groupId>
+  <artifactId>portal</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>portal automation</name>
+	<description>Portal Automation</description>
+
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<testng.version>6.14.3</testng.version>
+		<junit.version>4.12</junit.version>
+		<selenium.java.version>3.12.0</selenium.java.version>
+		<maven.compiler.version>3.7.0</maven.compiler.version>
+		<maven.surefire.version>2.21.0</maven.surefire.version>
+	</properties>
+
+	<dependencies>
+	 <dependency>				
+             <groupId>junit</groupId>								
+             <artifactId>junit</artifactId>								
+             <version>3.8.1</version>								
+             <scope>test</scope>								
+        </dependency>				
+        <dependency>				
+            <groupId>org.seleniumhq.selenium</groupId>								
+            <artifactId>selenium-java</artifactId>								
+            <version>${selenium.java.version}</version>								
+		</dependency>				
+        <dependency>				
+            <groupId>org.testng</groupId>								
+            <artifactId>testng</artifactId>								
+            <version>${testng.version}</version>								
+            <scope>test</scope>							  			
+       </dependency>			
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>1.8</source>
+         		    <target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<suiteXmlFiles>testng.xml</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+  
+</project>
