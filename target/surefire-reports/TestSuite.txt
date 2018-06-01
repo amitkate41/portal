@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 0.751 s <<< FAILURE! - in TestSuite
+navigateToPortal(com.portal.CheckIsPortalUpTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.portal.CheckIsPortalUpTest.navigateToPortal(CheckIsPortalUpTest.java:37)
+

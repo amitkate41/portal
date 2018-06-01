@@ -1,8 +1,14 @@
 package com.portal;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.portal.config.ConfigFileReader;
+import com.portal.config.Initializing;
+
+import executionEngine.KeyWordExecution;
 
 public class CheckIsPortalUpTest extends BaseAction{
 	
@@ -10,7 +16,13 @@ public class CheckIsPortalUpTest extends BaseAction{
 	public void afterTest() {
 		this.getDriver().quit();			
 	}
-	
+	@BeforeSuite
+	public void initializeSetup() {
+		this.propertyReader = ConfigFileReader.getInstace();
+		Initializing.exeKeyDriven = KeyWordExecution.getInstace();
+
+	}
+
 	@Parameters({ "suite-param" })
 	@Test(groups= {"Regression","log-in"},dependsOnMethods = { "navigateToPortal" })
 	public void verifyLogin() {

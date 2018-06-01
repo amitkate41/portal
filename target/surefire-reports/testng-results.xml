@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="30" started-at="2018-06-01T03:56:41Z" finished-at="2018-06-01T03:56:41Z">
+    <groups>
+      <group name="Regression">
+        <method signature="CheckIsPortalUpTest.navigateToPortal()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="navigateToPortal" class="com.portal.CheckIsPortalUpTest"/>
+        <method signature="CheckIsPortalUpTest.verifyLogin()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="verifyLogin" class="com.portal.CheckIsPortalUpTest"/>
+      </group> <!-- Regression -->
+      <group name="log-in">
+        <method signature="CheckIsPortalUpTest.navigateToPortal()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="navigateToPortal" class="com.portal.CheckIsPortalUpTest"/>
+        <method signature="CheckIsPortalUpTest.verifyLogin()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="verifyLogin" class="com.portal.CheckIsPortalUpTest"/>
+      </group> <!-- log-in -->
+    </groups>
+    <test name="Test" duration-ms="30" started-at="2018-06-01T03:56:41Z" finished-at="2018-06-01T03:56:41Z">
+      <class name="com.portal.CheckIsPortalUpTest">
+        <test-method status="FAIL" signature="navigateToPortal()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="navigateToPortal" duration-ms="5" started-at="2018-06-01T03:56:41Z" finished-at="2018-06-01T03:56:41Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.portal.config.Initializing.getTestCasFilePath(Initializing.java:63)
+at com.portal.CheckIsPortalUpTest.navigateToPortal(CheckIsPortalUpTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToPortal -->
+        <test-method status="SKIP" signature="verifyLogin()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b]" name="verifyLogin" duration-ms="0" started-at="2018-06-01T03:56:41Z" depends-on-methods="com.portal.CheckIsPortalUpTest.navigateToPortal" finished-at="2018-06-01T03:56:41Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CheckIsPortalUpTest.verifyLogin()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CheckIsPortalUpTest.verifyLogin()[pri:0, instance:com.portal.CheckIsPortalUpTest@5bcea91b] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- com.portal.CheckIsPortalUpTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeSuite;
 
 import com.portal.reader.ReadExcel;
 
@@ -12,8 +12,8 @@ import executionEngine.KeyWordExecution;
 
 public class Initializing {
 	
-	private ConfigFileReader propertyReader;
-	private static KeyWordExecution exeKeyDriven;
+	public ConfigFileReader propertyReader;
+	public static KeyWordExecution exeKeyDriven;
 	
 
 	/**
@@ -30,7 +30,7 @@ public class Initializing {
 		return propertyReader;
 	}
 
-	@BeforeTest
+	@BeforeSuite
 	public void initializeSetup() {
 		this.propertyReader = ConfigFileReader.getInstace();
 		Initializing.exeKeyDriven = KeyWordExecution.getInstace();

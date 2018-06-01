@@ -39,7 +39,8 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
-			<scope>test</scope>
+			
+			<!-- <scope>test</scope> -->
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
@@ -51,7 +52,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>${log4j.version}</version>
+			<version>1.2.17</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
 		<dependency>
@@ -59,6 +60,7 @@
 			<artifactId>jxl</artifactId>
 			<version>2.6.12</version>
 		</dependency>
+
 
 	</dependencies>
 
@@ -82,7 +84,9 @@
 				<inherited>true</inherited>
 
 				<configuration>
-					<suiteXmlFiles>testng.xml</suiteXmlFiles>
+					<suiteXmlFiles>
+						<file>testng.xml</file>
+					</suiteXmlFiles>
 
 				</configuration>
 			</plugin>
