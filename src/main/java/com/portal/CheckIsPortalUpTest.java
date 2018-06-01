@@ -34,7 +34,12 @@ public class CheckIsPortalUpTest extends BaseAction{
 	@Parameters({ "suite-param" })
 	@Test(groups= {"Regression","log-in"})
 	public void navigateToPortal() {
-			final String testCasePath = this.getTestCasFilePath("Regression");
+		String testCasePath = "navigateToPortal";
+		try {
+			  testCasePath = this.getTestCasFilePath("Regression");
+		}catch(NullPointerException e) {
+			LOGGER.error("Exeception :>>>>>>>>>>>>>>>>>>>>>>>>>>>>",e);
+		}
 			final String testCaseSheetName = Thread.currentThread().getStackTrace()[1].getMethodName();
 			executeTestCase(testCasePath, testCaseSheetName);
 	}

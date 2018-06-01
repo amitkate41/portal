@@ -27,6 +27,9 @@ public class Initializing {
 	 * @return the propertyReader
 	 */
 	public ConfigFileReader getPropertyReader() {
+		if(propertyReader ==null) {
+			initializeSetup();
+		}
 		return propertyReader;
 	}
 
@@ -60,7 +63,7 @@ public class Initializing {
 	
 	public String getTestCasFilePath(final String testSuitePath) {
 
-		final String baseFolder = propertyReader.getTestSuiteBaseDir();
+		final String baseFolder = this.getPropertyReader().getTestSuiteBaseDir();
 		StringBuilder testCasePath = new StringBuilder(baseFolder);
 		testCasePath.append(File.separator);
 		testCasePath.append(testSuitePath);
